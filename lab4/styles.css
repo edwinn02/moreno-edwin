@@ -1,0 +1,62 @@
+h1, h2 {
+    color: #3498db;
+}
+
+p {
+    color: #666666;
+    font-size: 16px;
+}
+
+.subtitulo {
+    font-style: italic;
+    color: #27ae60;
+}
+
+#intro {
+    background-color: #fff9c4;
+    padding: 15px;
+}
+
+.tarjeta {
+    border: 2px solid #808080;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    text-align: center;
+    background-color: #000000;
+    color: white;
+    padding: 20px 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}

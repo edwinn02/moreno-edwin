@@ -16,8 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
             btnBorrarTodo: document.getElementById('btnBorrarTodo'),
         };
 
-        // ... resto del código igual ...
-
         const templates = {
             studentRow: (estudiante, index) => `
                 <tr>

@@ -1,5 +1,10 @@
 # 🎮 PokéFinder – Proyecto Semestral
 
+Integrantes;
+Edinson Ramirez 8-948-104
+José Jiménez 8-909-997
+Edwin Moreno 8-887-2101
+
 PokéFinder es una aplicación web que permite **buscar**, **explorar**, **comparar** y **guardar Pokémon** utilizando la API pública **PokeAPI**.  
 El proyecto fue desarrollado siguiendo un diseño **Brutalist**, usando únicamente **HTML, CSS y JavaScript Vanilla**, sin frameworks.
 

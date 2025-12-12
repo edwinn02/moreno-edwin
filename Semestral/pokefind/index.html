@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PokéFinder</title>
+    <link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Buscar</a>
+    <a href="historico.html">Histórico</a>
+    <a href="favoritos.html">Favoritos</a>
+    <a href="vs.html">VS Battle</a>
+</nav>
+
+<button id="themeToggle" class="button">Modo Oscuro</button>
+
+<h1>PokéFinder</h1>
+
+<input id="searchInput" type="text" placeholder="Buscar Pokémon por nombre o ID" />
+
+<div id="autocomplete" class="brut-card" 
+     style="position:absolute; width:250px; display:none;"></div>
+
+<button class="button" id="btnBuscar">Buscar</button>
+
+<select id="modoBusqueda">
+    <option value="pokemon">Pokémon</option>
+    <option value="habilidad">Habilidad</option>
+</select>
+
+<div id="resultado"></div>
+
+<script src="shared.js"></script>
+<script src="ability.js"></script>
+<script src="evolution.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

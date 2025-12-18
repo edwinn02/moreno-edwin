@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Favoritos | PokéFinder</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Architects+Daughter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="title-sticker">FAVORITOS</div>
+
+  <nav class="top-nav">
+    <button class="nav-sticker" data-target="buscar">🔎 Buscar</button>
+    <button class="nav-sticker" data-target="historico">📜 Histórico</button>
+    <button class="nav-sticker" data-target="vs">⚔️ VS</button>
+    <button class="nav-sticker" data-target="favoritos">❤️ Favoritos</button>
+  </nav>
+</header>
+
+<main style="display:flex; justify-content:center; margin-top:30px;">
+  <div style="width:80%; max-width:800px;">
+
+    <div class="pokemon-card-comic" style="justify-content:space-between;">
+      <div style="font-size:22px; font-weight:bold;">Pokémon guardados</div>
+      <button id="clearFav" class="small-button">Limpiar</button>
+    </div>
+
+    <div id="favContainer" style="margin-top:20px;"></div>
+
+  </div>
+</main>
+
+<script src="shared.js"></script>
+<script src="app.js"></script>
+<script>
+(async function(){
+
+  const cont = document.getElementById("favContainer");
+  const favs = Storage.getFavorites();
+
+  if (favs.length === 0){
+    cont.innerHTML = `<div class="pokemon-card-comic">No hay favoritos guardados.</div>`;
+    return;
+  }
+
+  let html = "";
+  for (const id of favs){
+    try {
+      const res = await fetch("https://pokeapi.co/api/v2/pokemon/" + id);
+      const data = await res.json();
+      html += `
+        <div class="pokemon-card-comic" style="cursor:pointer; margin-bottom:14px;"
+             onclick="location.href='index.html?buscar=${data.name}'">
+          <div style="display:flex; align-items:center; gap:18px;">
+            <img src="${data.sprites.front_default}" width="80">
+            <div>#${data.id} - ${data.name.toUpperCase()}</div>
+          </div>
+          <div>➡️</div>
+        </div>
+      `;
+    } catch(e){}
+  }
+
+  cont.innerHTML = html;
+
+  document.getElementById("clearFav").addEventListener("click", ()=>{
+    Storage.clearFavorites();
+    location.reload();
+  });
+
+})();
+</script>
+
+</body>
+</html>

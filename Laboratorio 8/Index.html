@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Estudiantes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="title">📚 Registro de Estudiantes</div>
+        <div class="student-count" id="contador">0 estudiantes</div>
+    </div>
+
+    <div class="card">
+        <h2 class="card-title">Nuevo estudiante</h2>
+        <form id="formulario">
+            <div class="form-row">
+                <div>
+                    <label>Nombre *</label>
+                    <input type="text" id="nombre" placeholder="Ana Sofía">
+                </div>
+                <div>
+                    <label>Apellido *</label>
+                    <input type="text" id="apellido" placeholder="González">
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <label>Email *</label>
+                    <input type="email" id="email" placeholder="ana@example.com">
+                </div>
+                <div>
+                    <label>Edad</label>
+                    <input type="number" id="edad" placeholder="18">
+                </div>
+                <div>
+                    <label>Carrera</label>
+                    <select id="carrera">
+                        <option value="">— Selecciona —</option>
+                        <option value="Ingenieria en sistemas computacionales">Ingenieria en sistemas computacionales</option>
+                        <option value="Lic. en gestion y desarrollo de Software">Lic. en gestion y desarrollo de Software</option>
+                        <option value="Lic. en Redes Informaticas">Lic. en Redes Informaticas</option>
+                        <option value="Lic. en Ciberseguridad">Lic. en Ciberseguridad</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="btn-agregar">Agregar estudiante</button>
+            <button type="button" class="btn-limpiar" id="btnLimpiar">Limpiar</button>
+            <span style="color: #657786; margin-left: 10px;">Los campos marcados con * son obligatorios.</span>
+        </form>
+    </div>
+
+    <button class="btn-borrar-todo" id="btnBorrarTodo">Borrar todo</button>
+
+    <div class="card">
+        <h2 class="card-title">Estudiantes</h2>
+        <table id="tabla">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Edad</th>
+                    <th>Carrera</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="listaEstudiantes">
+            </tbody>
+        </table>
+        <div class="empty-state" id="sinResultados">
+            No hay resultados.
+        </div>
+        <div class="tip">
+            Consejo: usa el buscador para filtrar rápidamente los registros.
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

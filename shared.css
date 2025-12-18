@@ -266,8 +266,10 @@ body{
   border:10px solid var(--black);
   box-shadow: 8px 8px 0 rgba(0,0,0,0.9);
   padding:10px;
-  flex: 0 0 calc((100% - 40px) / 3); /* three items per row, accounting for gaps */
+  /* allow items to shrink/grow and wrap to the next line when needed */
+  flex: 1 1 220px; /* base width ~220px, flexible */
   max-width:320px;
+  min-width:160px;
   height:170px;
   display:flex;
   flex-direction:column;
@@ -283,10 +285,11 @@ body{
 .evo-row{
   display:flex;
   gap:20px;
-  flex-wrap:nowrap;
-  overflow-x:visible; /* ensure items stay visible, no horizontal scroll */
+  /* allow wrapping so items flow to the next row instead of overflowing */
+  flex-wrap:wrap;
+  overflow-x:hidden;
   padding:12px 6px;
-  justify-content:space-between; /* spread items to fit the container */
+  justify-content:center; /* center items for symmetry */
   align-items:center; /* center arrows vertically with items */
 }
 .evo-row::-webkit-scrollbar{ height:10px; }

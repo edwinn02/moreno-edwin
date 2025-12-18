@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Histórico | PokéFinder</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Architects+Daughter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="title-sticker">HISTÓRICO</div>
+
+  <nav class="top-nav">
+    <button class="nav-sticker" data-target="buscar">🔎 Buscar</button>
+    <button class="nav-sticker" data-target="historico">📜 Histórico</button>
+    <button class="nav-sticker" data-target="vs">⚔️ VS</button>
+    <button class="nav-sticker" data-target="favoritos">❤️ Favoritos</button>
+  </nav>
+</header>
+
+<main style="display:flex; justify-content:center; margin-top:30px;">
+  <div style="width:80%; max-width:800px;">
+
+    <div class="pokemon-card-comic" style="justify-content:space-between;">
+      <div style="font-size:22px; font-weight:bold;">Listado de búsquedas recientes</div>
+      <button id="clearHist" class="small-button">Limpiar</button>
+    </div>
+
+    <div id="histContainer" style="margin-top:20px;"></div>
+
+  </div>
+</main>
+
+<script src="shared.js"></script>
+<script>
+(function(){
+
+  const cont = document.getElementById("histContainer");
+  const hist = Storage.getHistory();
+
+  if (hist.length === 0){
+    cont.innerHTML = `<div class="pokemon-card-comic">No hay búsquedas registradas.</div>`;
+    return;
+  }
+
+  cont.innerHTML = hist.map(item => `
+    <div class="pokemon-card-comic" style="cursor:pointer; margin-bottom:12px;"
+         onclick="location.href='index.html?buscar=${item}'">
+      <div>${item}</div>
+      <div style="font-weight:bold;">➡️</div>
+    </div>
+  `).join("");
+
+  document.getElementById("clearHist").addEventListener("click", ()=>{
+    Storage.clearHistory();
+    location.reload();
+  });
+
+})();
+</script>
+
+</body>
+</html>

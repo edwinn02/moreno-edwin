@@ -216,13 +216,13 @@ body{
   background:var(--accent-2);
   color:#fff;
   border: 8px solid var(--black);
-  padding:14px 28px;
+  padding:10px 10px;
   font-weight:bold;
   cursor:pointer;
   box-shadow: 8px 8px 0 rgba(0,0,0,0.9);
   transform-origin:center;
 }
-.big-button:active{ transform: translate(-3px,-3px) scale(.99); }
+.big-button:active{ transform: translate(-2px,-2px) scale(.99); }
 
 /* Resultado card */
 .resultado-area{

@@ -1,7 +1,0 @@
-# Archivos temporales de Visual Studio
-.vs/
-*.vsidx
-*.user
-*.suo
-*.cache
-*.db

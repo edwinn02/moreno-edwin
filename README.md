@@ -4,11 +4,11 @@ Edwin Moreno
 
 <img width="681" height="675" alt="image" src="https://github.com/user-attachments/assets/db67e2ea-49b9-457a-a3ef-40264d5340ac" />
 
-Este repositorio corresponde al portafolio académico desarrollado para la asignatura de Desarrollo Web, como parte de la Licenciatura en Gestión y Desarrollo de Software en la Universidad Tecnológica de Panamá.
+Este repositorio corresponde a la asignatura de Desarrollo 5
 
-En este portafolio se evidencian los conocimientos adquiridos en el uso de HTML, CSS y JavaScript, aplicados en la creación de páginas web estructuradas, estilizadas y funcionales. Cada proyecto y ejercicio refleja el uso de buenas prácticas de desarrollo, organización del código y aplicación de conceptos fundamentales del desarrollo frontend.
+En este portafolio muestro lo que he aprendido usando HTML, CSS y JavaScript para crear páginas web con buena estructura, estilos básicos y funcionalidades. Los proyectos y ejercicios reflejan la práctica realizada durante el curso, la organización del código y la aplicación de los conceptos principales del desarrollo frontend.
 
-El objetivo de este portafolio es demostrar el progreso académico, la comprensión de los contenidos impartidos en clase y la correcta implementación de tecnologías web básicas, así como servir como evidencia del aprendizaje alcanzado durante el curso.
+El objetivo de este portafolio es mostrar mi avance durante la materia, demostrar que comprendí los temas vistos en clase y dejar evidencia del aprendizaje obtenido a lo largo del semestre.
 
 🛠️ Tecnologías utilizadas
 
@@ -20,4 +20,3 @@ JavaScript
 
 Diseño responsivo
 
-Organización y documentación del código

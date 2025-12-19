@@ -186,7 +186,7 @@ body{
   margin: -36px auto 0; /* slight overlap but centered */
 }
 
-/* Select stickesdr */
+/* Select sticker */
 .select-sticker select{
   appearance:none;
   -webkit-appearance:none;
@@ -198,7 +198,7 @@ body{
   box-shadow: var(--shadow-offset) var(--shadow-offset) 0 rgba(0,0,0,0.9);
 }
 
-/* Input central  b */
+/* Input central */
 .center-row input{
   width:420px;
   max-width:50vw;
@@ -216,7 +216,7 @@ body{
   background:var(--accent-2);
   color:#fff;
   border: 8px solid var(--black);
-  padding:14px 28px;
+  padding:10px 10px;
   font-weight:bold;
   cursor:pointer;
   box-shadow: 8px 8px 0 rgba(0,0,0,0.9);
@@ -422,4 +422,5 @@ body{
   .pokeball-bg{ width:92vw; height:92vw;}
   .resultado-area{ width:88vw;}
 }
+
 
